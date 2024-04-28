@@ -48,6 +48,18 @@ npm install -g @angular/cli
 
 - **`Push to git branch`**
 ```
+echo "# AngularSpringBoot" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Savindi20/AngularSpringBoot.git
+git push -u origin main
+
+git remote add origin https://github.com/Savindi20/AngularSpringBoot.git
+git branch -M main
+git push -u origin main
+
 git branch -m main frontend
 git fetch origin
 git branch -u origin/frontend frontend
