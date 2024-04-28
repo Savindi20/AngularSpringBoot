@@ -1,6 +1,9 @@
 package lk.ijse.gdse.login.controller;
 
+import lk.ijse.gdse.login.DTO.userDTO;
+import lk.ijse.gdse.login.service.userService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,8 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class userController {
 
-    @GetMapping("/health")
-    public String health(){
-        return "OK";
+    @Autowired
+    private userService UserService;
+
+    @PostMapping(path = "/save")
+    public String saveUser(@RequestBody userDTO UserDTO){
+        String id = UserService.addUser(UserDTO);
+        return id;
     }
 }
