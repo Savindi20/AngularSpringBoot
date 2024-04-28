@@ -7,7 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/user")
+@CrossOrigin
+@RequestMapping("/api/v1/user")
 @RequiredArgsConstructor
 public class userController {
 

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import org.apache.catalina.User;
 
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class user {
 
     @Id
