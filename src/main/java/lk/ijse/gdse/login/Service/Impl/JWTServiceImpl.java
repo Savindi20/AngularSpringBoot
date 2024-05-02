@@ -18,7 +18,6 @@ import java.util.function.Function;
 
 @Service
 public class JWTServiceImpl implements JWTService {
-
     @Value("${token.key}")
     private String jwtKey;
 
@@ -52,7 +51,7 @@ public class JWTServiceImpl implements JWTService {
                 .signWith(getSignKey(), SignatureAlgorithm.HS256).compact();
 
 
-        return accessToken + " : " +refreshToken;
+        return accessToken;
     }
 
     @Override
