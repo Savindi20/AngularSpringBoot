@@ -15,11 +15,6 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private final AuthenticationService authenticationService;
 
-    @GetMapping("/health")
-    public String health(){
-        return "OK";
-    }
-
     @PostMapping("/signup")
     public ResponseEntity<JwtAuthResponse> signUp(@RequestBody SignUp signUp) {
         System.out.println(signUp.getName());
